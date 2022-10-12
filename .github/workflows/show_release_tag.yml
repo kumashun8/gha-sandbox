@@ -10,7 +10,7 @@ jobs:
       - name: Set the value
         id: step_one
         run: |
-          run: echo "{release_tag}=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+          echo "{release_tag}=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
       - name: Use the value
         id: step_two
         run: |
